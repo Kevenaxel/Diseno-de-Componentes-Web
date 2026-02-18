@@ -1,0 +1,217 @@
+/*Selector universal del CSS*/
+* {
+    /*Incluye Padding y border dentro del width height*/
+    box-sizing: border-box;
+}
+
+/*Estilos Generales*/
+body{
+    /*Color de Fondo de cada pagina web*/
+    background-color: #f2f2f2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+.post{
+    /*Definimos el Ancho fijo de la tarjeta*/
+    width: 600px;
+
+    /*Espacio interno entre el contenido*/
+    /*PADDING influye internamente en el box model*/
+    padding: 24px;
+
+    /*Borde real del elemento*/
+    border: 2px solid #8b5e3c;
+
+    /*Contorno Externo, que no afecta ni ocupa espacio o al tamanio de la tarjeta*/
+    /*dashed hace las lineas puntadas de color de orange*/
+    border: solid;
+    /*El margen de arriba*/
+    margin-top: 20px;
+    /*EL margen de abajo*/
+    margin-bottom: 40px;
+    /*Altura minima del elemento*/
+    min-width: 200px;
+    /*El Maximo del ancho*/
+    max-width: 100%;
+    /*Sombra que no forma parte del box model*/
+    box-shadow: 0 5px 10px rgb(155, 52, 52);
+
+    border-radius: 15px;
+    
+}
+
+.nota{
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f5e7b6;
+    /*Hace un borde a la izquierda suya a la derecha de la pantalla*/
+    border-left: 5px solid #f0ad4e;
+}
+
+
+
+
+.post2{
+      /*Definimos el Ancho fijo de la tarjeta*/
+    width: 600px;
+
+    /*Espacio interno entre el contenido*/
+    /*PADDING influye internamente en el box model*/
+    padding: 24px;
+
+    /*Borde real del elemento*/
+    border: 2px solid #8b5e3c;
+
+    /*Contorno Externo, que no afecta ni ocupa espacio o al tamanio de la tarjeta*/
+    /*dashed hace las lineas puntadas de color de orange*/
+    border: solid;
+    /*El margen de arriba*/
+    margin-top: 20px;
+    /*EL margen de abajo*/
+    margin-bottom: 40px;
+    /*Altura minima del elemento*/
+    min-width: 200px;
+    /*El Maximo del ancho*/
+    max-width: 100%;
+    /*Sombra que no forma parte del box model*/
+    box-shadow: 0 5px 10px rgb(170, 58, 58);
+    background-color: white;
+
+    border-radius: 15px;
+}
+
+.nota2{
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f5e7b6;
+    /*Hace un borde a la izquierda suya a la derecha de la pantalla*/
+    border-left: 5px solid #f0ad4e;
+}
+
+
+
+.post3{
+      /*Definimos el Ancho fijo de la tarjeta*/
+    width: 600px;
+
+    /*Espacio interno entre el contenido*/
+    /*PADDING influye internamente en el box model*/
+    padding: 24px;
+
+    /*Borde real del elemento*/
+    border: 2px solid #8b5e3c;
+
+    /*Contorno Externo, que no afecta ni ocupa espacio o al tamanio de la tarjeta*/
+    /*dashed hace las lineas puntadas de color de orange*/
+    border: solid;
+    /*El margen de arriba*/
+    margin-top: 20px;
+    /*EL margen de abajo*/
+    margin-bottom: 40px;
+    /*Altura minima del elemento*/
+    min-width: 200px;
+    /*El Maximo del ancho*/
+    max-width: 100%;
+    /*Sombra que no forma parte del box model*/
+    box-shadow: 0 5px 10px rgb(168, 55, 55);
+    background-color: white;
+
+    border-radius: 15px;
+}
+
+
+.nota3{
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f5e7b6;
+    /*Hace un borde a la izquierda suya a la derecha de la pantalla*/
+    border-left: 5px solid #f0ad4e;
+}
+
+/*.Descripcion1{
+    background-color: blue;
+    border-left: 5px solid #f0ad4e;
+}
+
+
+
+
+/*.Descripcion2{
+    background-color: red;
+    border-left: 5px solid #f0ad4e;
+}
+
+/*.Descripcion3{
+    background-color: blueviolet;
+    border-left: 5px solid #f0ad4e;
+}
+*/
+.Centrar{
+    width: 50%;
+    margin: auto;
+    
+}
+
+/*CENTRAR LAS OPCIONES DE MENU*/
+
+.Menu{
+  position: relative;              
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 25px;
+  background:#0b3a6e;
+  color:#fff;
+}
+
+/*Ordenamos toda slas opiones a la derecha*/
+.Etiquetas{
+  display:flex;
+  gap:20px;
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+.Etiquetas a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+#menu-toggle{ display:none; }
+
+/*Mostrar color al momento de pasar cursor*/
+.menu-icon{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* Mobiles*/
+@media (max-width:768px){
+  .menu-icon{ display:block; }
+
+  nav{
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    background:#0b3a6e;
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .3s ease;
+  }
+
+  .Etiquetas{
+    flex-direction:column;
+    padding:20px;
+    align-items:center; /*ESto lo centramos para q se vea bien*/
+  }
+
+  /* FIX: con  no importa lo que haya en medio */
+  #menu-toggle:checked ~ nav{
+    max-height:350px;
+  }
+}
