@@ -1,0 +1,63 @@
+body{
+    background-color: blue; /*El Color de fondo*/
+    display: flex;
+    justify-content: center; /*Se cen tra el texto*/
+    height: 100vh;
+    margin: 0; /*No quiero Margen*/
+}
+
+h1{
+    color: #FFCC00; /*Color del texto*/
+    font-family: sans-serif; /*Tipo de letra*/
+    text-align: center; /*Centrar el texto*/
+}
+
+.contenedor{
+    text-align: center; /*Centra en medio al texto*/
+    width: 80%;
+}
+
+.tarjetas{
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    gap: 20px; /*Permite separar todas tarjetas*/
+    margin-top: 30px;
+}
+
+.tarjeta{
+    background-color: #ffffff;
+    color: #003366;
+    padding: 40px;
+    flex: 1;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.5rem ; /*Tamano de texto*/
+}
+
+@media (max-width: 600px){ /*La media Queries cuando es el tamano pequeno cambia color y hace efecto*/
+    body{
+        background-color: #FFCC00;
+    }
+
+    h1{
+        color: #003366;
+    }
+
+}
+
+@media (max-width: 600px){ /*Lo que ocasiona esq se posicione debajo del siguiente cuadro*/
+    .tarjetas{
+        display: flex;
+        flex-direction: column-reverse; /*Con el column reverse se re ordena el cuadro*/
+        gap: 50px;
+    }
+}
+
+@media (max-width: 600px){
+    .tarjeta{
+        font-size: 10px;
+        gap: 10px;
+        
+    }
+}

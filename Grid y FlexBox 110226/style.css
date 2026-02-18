@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box; /*Ancho y alto modifica*/
+    margin: 0;/*Eliminar margenes del navegador*/
+    padding: 0; /*Para eliminar bien el espacio*/
+}
+
+
+/*Estilos Generales*/
+
+body{
+    font-family: Arial, Helvetica, sans-serif; /*Tipo de letra de todo el body*/
+    background-color: #f2f2f2f2; /*Color de FOndo*/
+}
+
+/*ESTRUCTURA DEL GRID*/
+.layout{
+    display: grid;/*Activamos el CSS GRID*/
+    grid-template-columns: 200px 1fr; /*Menu Lateral y contenido 1fr*/
+    /*Que Espacio abra en cada Articulo?*/
+    gap: 20px;
+    padding: 20px;/*Separo  un poco a la izquierda*/
+}
+
+
+/*ES DONDE TENEMOS LAS TARJETAS*/
+.contenido{
+    display: flex; /*Para que los articulos se vean a la par y no en vertical*/
+    gap: 20px; /*Para tener un espacio entre articulo*/
+
+}
+
+/*ESTRUCTURA DE LAS TARJETAS*/
+.card{
+    background-color: white;
+    padding: 20px;/*Espacio interno para q se vea mas grande*/
+    flex: 1; /*Me dice q todos los elementos ocuparan una relacion de 1*/
+    text-align: center;/*Centar Texto*/
+    box-shadow: 0 6px 10px rgb(0, 0, 0, 1);/* DE en medio empieza borde de abajo y de 15 px una sombra al fondo*/
+    border-radius: 10px; /*Darle un borde a la cajita del texto*/
+
+}
+/*Realizar estilo compartido solo poner las clases*/
+.header,
+.footer,
+.sidebar{
+    background-color: blue;
+    color: white;
+    padding: 15px;
+    
+}
