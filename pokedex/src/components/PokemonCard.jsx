@@ -19,7 +19,7 @@ const TYPE_COLORS = {
   steel: "#78909c",
 };
 
-export function PokemonCard({ pokemon }) {
+export function PokemonCard({ pokemon, onClick }) {
   const types = pokemon.types.map((t) => t.type.name);
   const mainColor = TYPE_COLORS[types[0]] || "#bcaaa4";
   const sprite =
@@ -29,11 +29,13 @@ export function PokemonCard({ pokemon }) {
   return (
     <div
       className="pokemon-card"
-      style={{ "--card-color": mainColor }}
+      style={{ "--card-color": mainColor, cursor: "pointer" }}
+      onClick={onClick}
     >
       <span className="pokemon-id">#{String(pokemon.id).padStart(3, "0")}</span>
       <img src={sprite} alt={pokemon.name} />
       <h2>{pokemon.name}</h2>
+
       <div className="types">
         {types.map((type) => (
           <span
@@ -45,6 +47,7 @@ export function PokemonCard({ pokemon }) {
           </span>
         ))}
       </div>
+
       <div className="stats">
         <span>HP {pokemon.stats[0].base_stat}</span>
         <span>ATK {pokemon.stats[1].base_stat}</span>
